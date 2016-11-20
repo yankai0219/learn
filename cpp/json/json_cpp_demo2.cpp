@@ -5,8 +5,8 @@
 
 int main()
 {
-    //std::string strValue ="{\"1\":{\"addr\":\"beijing\",\"age\":12,\"name\":\"Tome\"},\"2\":{\"addr\":\"beijing2\",\"age\":13,\"name\":\"Tome2\"}}";
-    std::string strValue ="{1:{\"addr\":\"beijing\",\"age\":12,\"name\":\"Tome\"},2:{\"addr\":\"beijing2\",\"age\":13,\"name\":\"Tome2\"}}";
+    std::string strValue ="{\"1\":{\"addr\":\"beijing\",\"age\":12,\"name\":\"Tome\"},\"2\":{\"addr\":\"beijing2\",\"age\":13,\"name\":\"Tome2\"}}";
+    //std::string strValue ="{1:{\"addr\":\"beijing\",\"age\":12,\"name\":\"Tome\"},2:{\"addr\":\"beijing2\",\"age\":13,\"name\":\"Tome2\"}}";
     Json::Reader reader;
     Json::Value value;
     if (! reader.parse(strValue, value)) {
