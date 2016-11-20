@@ -1,29 +1,30 @@
 #include "json/json.h"
 
 #include <iostream>
-#include <cstdio>
 #include <string>
+
+using namespace std;
 int main()
 {
-    std::string strValue ="[{\"name\":\"TOM\",\"id\":4},{\"name\":\"JACK\",\"id\":5}]";
+    string strValue ="[{\"name\":\"TOM\",\"id\":4},{\"name\":\"JACK\",\"id\":5}]";
     Json::Reader reader;
     Json::Value value;
     if (reader.parse(strValue, value)) {  
         if (value.type() != Json::arrayValue) {
-            printf("Json type is not arrayValue %d\n", value.type());
+            std::cout << "Json type is not arrayValue "<< std::endl;
             return 0;
         }  
         for(unsigned int i = 0;i < value.size(); i++) {  
             if (value[i].type() != Json::objectValue) {
-                printf("Json type is not objectValue %d\n", value[i].type());
+                cout << "Json type is not objectValue "<< "\n";
                 continue;
             }          
-            if(!value[i].isMember("name")) {
+            if (! value[i].isMember("name")) {
                 continue;
             }
 
-            std::string name = value[i]["name"].asString(); 
-            std::cout << "got name " << name <<std::endl;
+            string name = value[i]["name"].asString(); 
+            cout << "got name " << name <<endl;
             if(!value[i].isMember("id")) {
                 continue;
             }
