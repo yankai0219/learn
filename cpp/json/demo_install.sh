@@ -33,6 +33,15 @@ cd ~/json_cpp_dist
 cp /tmp/json_cpp_demo1.cpp ~/json_cpp_dist
 g++ json_cpp_demo1.cpp -I ./include ./libs/linux-gcc-4.4.7/libjson_linux-gcc-4.4.7_libmt.a -o c
 ./c
+## 将会输出
+## got name TOM
+## got id4
+## gotmember id
+## gotmember name
+## got name JACK
+## got id5
+## gotmember id
+## gotmember name
 
 #参考文章
 #http://www.cnblogs.com/logicbaby/archive/2011/07/03/2096794.html
