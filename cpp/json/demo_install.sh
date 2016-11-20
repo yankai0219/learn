@@ -29,8 +29,8 @@ cp -r $SOURCE_CODE_DIR/include ~/json_cpp_dist
 cp -r $SOURCE_CODE_DIR/libs ~/json_cpp_dist
 
 ###编译
+cp ./json_cpp_demo1.cpp ~/json_cpp_dist
 cd ~/json_cpp_dist
-cp /tmp/json_cpp_demo1.cpp ~/json_cpp_dist
 g++ json_cpp_demo1.cpp -I ./include ./libs/linux-gcc-4.4.7/libjson_linux-gcc-4.4.7_libmt.a -o c
 ./c
 ## 将会输出
